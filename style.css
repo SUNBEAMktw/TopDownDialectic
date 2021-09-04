@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 body{
+  background-color: white;
+  color: black;
   font-family: 'Noto Sans KR', sans-serif;
+}
+#svgelem {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
 }
 ::selection { 
   color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
-
 a:link{
   color: rgb(23, 51, 165);
 }
