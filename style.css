@@ -4,7 +4,7 @@ body{
   color: black;
   font-family: 'Noto Sans KR', sans-serif;
 }
-      div {
+      div.row {
         width: 100%;
         display: flex;
         border: 1px solid rgb(23, 51, 165);
