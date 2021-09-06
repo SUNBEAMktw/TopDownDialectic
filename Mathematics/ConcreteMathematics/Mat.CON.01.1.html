@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>CON.01</title>
+    <link rel=" shortcut icon" href="../../favicon (3).ico">
+    <link rel="icon" href="../../favicon (3).ico">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+  </head>
+  
+  <body>
+    <script type="text/javascript" src="http://www.ktug.or.kr/public/MathJax/MathJax.js"> 
+  MathJax.Hub.Config({ 
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"], 
+    jax: ["input/TeX","output/HTML-CSS"], 
+    tex2jax: {inlineMath: [["$","$)"]], displayMath: [["$$","$$"]]}, 
+  }); 
+</script>
+    <center>
+      "이제 나는 <em><a href="../../index.html">
+      어떠한 저항도 하지 않기로</a></em> 결심했다."
+      <br>1914년 8월 26일, 비트겐슈타인.<br>
+      
+      <hr width="50%" color="#1733a5" noshade>
+      
+      <a href="../../Logic/Log.html">논리학</a>
+      &nbsp;
+      <mark id="red">수학</mark> 
+      &nbsp;
+      <a href="../../Physics/Phy.html">물리학</a>
+      &nbsp;
+      <a href="../../ComputerScience/CoS.html">전산학</a> 
+      &nbsp;
+      <a href="../../ComputerEngineering/CoE.html">컴퓨터공학</a>
+      &nbsp;
+      <a href="../../MediaStudies/MeS.html">매체학</a>
+      &nbsp;
+      <a href="../../Music/Mus.html">음악</a>
+      &nbsp;
+      <a href="../../Philosophy/Phi.html">철학</a>
+      
+      <hr width="70%" color="#1733a5" noshade>
+      
+    </center>
+    <div class="row">
+    <div class="left">
+      <ul>
+        <li><mark id="red">『구체수학』</mark></li>
+        <li><a href="../CalculusVolume1/Mat.CA1.html">『미적분 1』</a></li>
+      <li><a href="../CalculusVolume2/Mat.CA2.html">『미적분 2』</a></li>
+      <li><a href="../AnalysisVolume1/Mat.AN1.html">『해석학 1』</a></li>
+      <li><a href="../AnalysisVolume2/Mat.AN2.html">『해석학 2』</a></li>
+      <li><a href="../Real_andComplexAnalysis/Mat.RCA.html">『실수 및 복소수 해석학』</a></li>
+      <li><a href="../GeneralTopology/Mat.GTP.html">『일반위상수학』</a></li>
+     </ul>
+    </div>
+    <div class="center">
+    <ul>
+      <li>1장 <mark id="red">재귀적인 문제들</mark></li>
+      <li>2장 <a href="Mat.CON.02.html">합</a></li>
+      <li>3장 <a href="Mat.CON.03.html">정수 함수</a></li>
+      <li>4장 <a href="Mat.CON.04.html">정수론</a></li>
+      <li>5장 <a href="Mat.CON.05.html">이항계수</a></li>
+      <li>6장 <a href="Mat.CON.06.html">특별한 수들</a></li>
+      <li>7장 <a href="Mat.CON.07.html">생성함수</a></li>
+      <li>8장 <a href="Mat.CON.08.html">이산 확률</a></li>
+      <li>9장 <a href="Mat.CON.09.html">점근법</a></li>
+    </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li>1.1 <mark id="red">하노이의 탑</mark></li>
+        <li>1.2 <a href="Mat.CON.01.2.html">평면의 선들</a></li>
+        <li>1.3 <a href="Mat.CON.01.3.html">요세푸스 문제</a></li>
+        <li><a href="Mat.CON.01.ex.html">연습문제</a></li>
+      </ul>
+    </div>
+    </div>
+    <hr width="100%" color="#1733a5" noshade>
+    <p>
+      <a href="http://www.pauls-pc-repair.com/sudoku/index.php?page=Tower" target="_blank"><img src="../../photo/hanoi.gif"></a>
+    </p>
+    <p>
+        "퍼즐의 목표는 원반을 하나씩 이동해서 탑 전체를 다른 기둥으로 옮기는 것이다. 단, 작은 원반 위에 큰 원반을 놓아서는 안 된다는 규칙을 지켜야 한다."
+    </p>
+    <p>
+      "최선의 해는 무엇일까? 즉, 과업을 완수하기에 필요한, 그리고 충분한 이동 횟수는 얼마일까?"
+      </p>
+    <p>
+      "일반화하는 것(...) 원반이 $n$개인 경우를 고찰"
+      </p>
+      <p>
+        "<mark>작은 사례</mark>(small case)들을 살펴보는 것(...) <mark>명명정복</mark>(name and conquer)"
+        </p>
+        <p>
+          "그럼 한 기둥에서 원반 $n$개를 뤼카의 규칙하에서 다른 한 기둥으로 옮기는 데 필요한 최소한의 이동 횟수를 $T_{n}$으로 표기하기로 하자.
+          $T_{1}$이 1이고 $T_{2}$이 3임은 자명하다. [또, ] $T_{0}=0$임은 명백하다."
+          </p>
+          <p>
+            "먼저 가장 작은 원반 $n-1$개를 다른 기둥으로 옮기고(필요한 이동 횟수는 $T_{n-1}$), 가장 큰 원반을 또 다른 기둥으로 옮기고(필요
+            이동 횟수 $1$), 마지막으로 가장 작은 원반 $n-1$개를 가장 큰 원반 위로 옮기는 것이다(필요 이동 횟수 $T_{n-1}$). (...)더 나은 
+            해법이 있는 것일까? 사실은 없다. (...) 다음이 나온다."
+            </p>
+            <p>
+              $$
+              \documentclass{article}
+              \usepackage{amsmath}      % for \tag and \eqref macros
+              \setlength\textwidth{7cm} % just for this example
+              \begin{document}
+              \[
+              1+1=2 \tag{5.23} \label{eq:special}
+              \]
+              A cross-reference to equation \eqref{eq:special}.
+              \end{document}
+              $$
+              </p>
+  </body>      
+</html>
