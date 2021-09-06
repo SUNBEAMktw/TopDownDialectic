@@ -84,23 +84,23 @@
         <li>1.2 <a href="CoS.CPP.01.2.html">입력/출력 소개</a></li>
         <li>1.3 <a href="CoS.CPP.01.3.html">주석에 관해</a></li>
         <li>1.4 <a href="CoS.CPP.01.4.html">흐름 제어</a></li>
-        <li>1.4.1 <a href="CoS.CPP.01.4.1.html"><code>while</code>문</a></li>
-        <li>1.4.2 <a href="CoS.CPP.01.4.2.html"><code>for</code>문</a></li>
+        <li>1.4.1 <a href="CoS.CPP.01.4.1.html"><mark id="blue">while</mark>문</a></li>
+        <li>1.4.2 <a href="CoS.CPP.01.4.2.html"><mark id="blue">for</mark>문</a></li>
         <li>1.4.3 <a href="CoS.CPP.01.4.3.html">미지수 입력 읽기</a></li>
-        <li>1.4.4 <a href="CoS.CPP.01.4.4.html"><code>if</code>문</a></li>
+        <li>1.4.4 <a href="CoS.CPP.01.4.4.html"><mark id="blue">if</mark>문</a></li>
         <li>1.5 <a href="CoS.CPP.01.5.html">클래스 소개</a></li>
-        <li>1.5.1 <a href="CoS.CPP.01.5.1.html"><code>Sales_item</code> 클래스</a></li>
+        <li>1.5.1 <a href="CoS.CPP.01.5.1.html"><mark id="blue">Sales_item</mark> 클래스</a></li>
         <li>1.5.2 <a href="CoS.CPP.01.5.2.html">멤버 함수 소개</a></li>
         <li>1.6 <a href="CoS.CPP.01.6.html">서점 프로그램</a></li>
         <li><a href="CoS.CPP.01.Sum.html">요약</a></li>
         <li><a href="CoS.CPP.01.Def.html">정의된 용어</a></li>
       </ul>
-    </div>
+    </div>  
     </div>
      
       <hr width="100%" color="#1733a5" noshade>
     <p>
-    모든 C++ 프로그램은 하나 이상의 <mark>함수(functions)</mark>로 구성되며, 하나의 함수는 <mark>main</mark>이라고 명명되어야 한다. 운영체제는 <code>main</code>을 호출하여 C++ 프로그램을 실행한다. 아래는 <code>main</code>의 단순한 판본이다. 아무것도 안 하지만 운영체제에 값(value)을 반환(return)한다. 
+    모든 C++ 프로그램은 하나 이상의 <mark>함수(functions)</mark>로 구성되며, 하나의 함수는 <mark>main</mark>이라고 명명되어야 한다. 운영체제는 <mark id="blue">main</mark id="blue">을 호출하여 C++ 프로그램을 실행한다. 아래는 <mark id="blue">main</mark>의 단순한 판본이다. 아무것도 안 하지만 운영체제에 값(value)을 반환(return)한다. 
     </p>
     <pre><code class="C++">int main()
     {
@@ -108,10 +108,10 @@
     }
     </code></pre>
     <p>
-    함수 선언의 네 가지 요소로는 <mark>반환 타입(return type)</mark>,<mark>함수 이름</mark>, 괄호로 묶인 (공백이 허용되는) <mark>매개변수 목록(parameter list)</mark>, <mark>함수 몸체(function body)</mark>가 있다. 물론 <code>main</code>이 어떤 의미에서는 특별하지만, 우리는 <code>main</code>을 여느 함수와 마찬가지 방식으로 정의할 것이다.
+    함수 선언의 네 가지 요소로는 <mark>반환 타입(return type)</mark>,<mark>함수 이름</mark>, 괄호로 묶인 (공백이 허용되는) <mark>매개변수 목록(parameter list)</mark>, <mark>함수 몸체(function body)</mark>가 있다. 물론 <mark id="blue">main</mark>이 어떤 의미에서는 특별하지만, 우리는 <mark id="blue">main</mark>을 여느 함수와 마찬가지 방식으로 정의할 것이다.
     </p>
    <p>
-   이 예제에서 <code>main</code>은 (아무것도 없는 <code>()</code>를 통해 확인할 수 있는) 빈 매개변수 목록을 갖는다. §6.2.5에서 <code>main</code>을 위해 정의할 수 있는 매개변수 타입을 논의할 것이다.
+   이 예제에서 <mark id="blue">main</mark>은 (아무것도 없는 <mark id="blue">()</mark>를 통해 확인할 수 있는) 빈 매개변수 목록을 갖는다. §6.2.5에서 <mark id="blue">main</mark>을 위해 정의할 수 있는 매개변수 타입을 논의할 것이다.
    </p>
     <p>
     함수 정의의 마지막 단계인 함수 몸체란 <mark>문장(statements)</mark>의 한 <mark>블록(block)</mark>으로, <mark>중괄호(curly brace)</mark>로 시작하고 끝난다. 
@@ -122,16 +122,16 @@
     }
     </pre></code>
     <p>
-    이 블록에서 유일한 문장은 <code>return</code>으로, 함수를 종결하는 문장이다. 이 경우처럼 <code>return</code>은 함수의 호출자에게 값을 돌려줄 수도 있다. <code>return</code> 문장이 값을 포함할 때, 반환 값은 함수의 반환 타입과 호환되어야 한다. 이 경우, <code>main</code>의 반환 타입은 <code>int</code>이며 반환 값은 0으로, <code>int</code>다.
+    이 블록에서 유일한 문장은 <mark id="blue">return</mark>으로, 함수를 종결하는 문장이다. 이 경우처럼 <mark id="blue">return</mark>은 함수의 호출자에게 값을 돌려줄 수도 있다. <mark id="blue">return</mark> 문장이 값을 포함할 때, 반환 값은 함수의 반환 타입과 호환되어야 한다. 이 경우, <mark id="blue">main</mark>의 반환 타입은 <mark id="blue">int</mark>이며 반환 값은 0으로, <mark id="blue">int</mark>다.
     </p>
     <p>
     <div class="note">
     메모<br>
-<code>return</code> 문장 끝에 있는 세미콜론(semicolon)에 주목할 것. 세미콜론은 C++의 문장 대부분에서 끝을 표시한다. 무시하기 쉽지만, 까먹으면 의미심장한 컴파일러 오류 메시지로 이어질 것이다.
+<mark id="blue">return</mark> 문장 끝에 있는 세미콜론(semicolon)에 주목할 것. 세미콜론은 C++의 문장 대부분에서 끝을 표시한다. 무시하기 쉽지만, 까먹으면 의미심장한 컴파일러 오류 메시지로 이어질 것이다.
     </div>
     </p>
     <p>
-    대부분의 시스템에서 <code>main</code>에서 반환된 값은 상태 지시사(status indicator)다. 반환 값 <code>0</code>은 성공을 지시한다. 0이 아닌 반환 값은 시스템에 의해 정의된 뜻을 갖는다. 보통 0이 아닌 반환 값은 발생한 오류의 유형을 지시한다.
+    대부분의 시스템에서 <mark id="blue">main</mark>에서 반환된 값은 상태 지시사(status indicator)다. 반환 값 <mark id="blue">0</mark>은 성공을 지시한다. 0이 아닌 반환 값은 시스템에 의해 정의된 뜻을 갖는다. 보통 0이 아닌 반환 값은 발생한 오류의 유형을 지시한다.
   </p>
   <p>
   <div class="note">
@@ -140,7 +140,7 @@
     </div>
   </p>
 <p>
-    우리의 프로그램이 조작하는 자료는 변수에 저장되며 모든 변수는 타입을 갖는다. <code>v</code>라는 이름의 변수 하나가 <code>T</code>라는 타입을 가질 때, 우리는 종종 “<code>v</code>는 타입 <code>T</code>를 갖는다”라고 말하거나 “<code>v</code>는 <code>T</code>다”라고 말한다. 
+    우리의 프로그램이 조작하는 자료는 변수에 저장되며 모든 변수는 타입을 갖는다. <mark id="blue">v</mark>라는 이름의 변수 하나가 <mark id="blue">T</mark>라는 타입을 가질 때, 우리는 종종 “<mark id="blue">v</mark>는 타입 <mark id="blue">T</mark>를 갖는다”라고 말하거나 “<mark id="blue">v</mark>는 <mark id="blue">T</mark>다”라고 말한다. 
 </p>   
   </body>
       
