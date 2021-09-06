@@ -18,9 +18,8 @@ body{
         flex: 1;
       }
 div.note{
-color: white;
-  background-color: rgb(216, 49, 49);
-  width: 100%;
+  background-color: rgb(103, 159, 164);
+  width: 90%;
 }
 #svgelem {
    margin-left:auto;
