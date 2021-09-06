@@ -51,3 +51,7 @@ mark{
   color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
+mark.red{
+  color: white;
+  background: rgb(216, 49, 49);
+}
