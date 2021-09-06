@@ -41,8 +41,10 @@ a:active{
 }
 code{
   font-family: 'Source Code Pro', monospace; 
+  color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
 em{
+  color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
