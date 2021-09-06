@@ -44,8 +44,7 @@ code{
   color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
-b{
-  font-family: 'Noto Sans KR', sans-serif;
+mark{
   color: rgb(23, 51, 165);
   background: rgb(248, 220, 9);
 }
