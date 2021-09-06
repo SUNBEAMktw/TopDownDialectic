@@ -19,6 +19,7 @@ body{
       }
 code{
   font-family: 'Source Code Pro', monospace; 
+  background: rgb(248, 220, 9);
 }
 #svgelem {
    margin-left:auto;
