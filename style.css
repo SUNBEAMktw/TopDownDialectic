@@ -43,3 +43,6 @@ code{
   font-family: 'Source Code Pro', monospace; 
   background: rgb(248, 220, 9);
 }
+em{
+  background: rgb(248, 220, 9);
+}
