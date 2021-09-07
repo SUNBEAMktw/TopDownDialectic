@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
     <center>
       "이제 나는 <em><a href="../../index.html">
       어떠한 저항도 하지 않기로</a></em> 결심했다."
@@ -17,7 +24,7 @@
 
       <hr width="50%" color="#1733a5" noshade>
 
-      논리학
+      <mark id="red">논리학</mark>
       &nbsp;
       <a href="../../Mathematics/Mat.html">수학</a>
       &nbsp;
@@ -76,7 +83,7 @@
     </ul>
       <hr width="100%" color="#1733a5" noshade>
     <ul>
-      <li>1.1 <a href="Log.OLT.01.01.01.html">외연성</a></li>
+      <li>1.1 <mark id="red">외연성</mark></li>
       <li>1.2 <a href="Log.OLT.01.01.02.html">부분집합과 멱집합</a></li>
       <li>1.3 <a href="Log.OLT.01.01.03.html">중요한 집합들</a></li>
       <li>1.4 <a href="Log.OLT.01.01.04.html">합집합과 교집합</a></li>
@@ -85,7 +92,75 @@
       <li><a href="Log.OLT.01.01.ex.html">연습문제</a></li>
     </ul>
     </div>
-
     </div>
+    <hr width="100%" color="#1733a5" noshade>
+    <p>
+      <mark>집합</mark>(set)은 객체의 모임이며, [그 자체로] 단일 객체로 간주한
+      다. 집합을 조성하는 객체는 <mark>원소</mark>(elements) 또는 집합의 
+      <mark>구성원</mark>(members)이라고 불린다. $x$가 집합 $a$의 구성원이라면, 
+      $x\in a$라고 적는다. 아니라면, $x\notin  a$라고 적는다. 구성원이 없는 집합은
+      <mark>공집합</mark>(empty set)이라구 불리며 "\varnothing"으로 표기된다.  
+      </p>
+      <p>
+        집합 <mark>상술</mark>(詳述, specify) 방식이나 구성원을 <mark>순서 짓는</mark>
+        (order) 방식은 물론 구성원을 <mark>센 횟수</mark>(many times)도 상관 없다. 문제는 
+        그 구성원이 무엇이냐는 것이다. 이를 다음 원칙으로 성문화(成文化, codify)한다.
+        </p>
+        <div class="blue">
+          <h4>정의 2.1 (외연성).</h4>
+          $A$와 $B$가 집합일 때, $A$의 모든 구성원이 $B$의 구성원이기도 하며 그 역도 마찬가지인
+           경우 그리고 오직 그런 경우(iff) $A=B$다.
+          </div>
+          <p>
+            외연성(外延性, extensionality)은 일련의 표기법을 허가한다. 일반적으로, 객체 
+            $a_{1},\;...,\;a_{n}$를 갖고 있을 때, $\left \{a_{1},\;...,\;a_{n}  \right \}$
+            는 구성원이 $a_{1},\;...,\;a_{n}$인 <mark>바로 그</mark>(the) 집합이다. 여기서 
+            "<mark>그</mark>"가 강조되었는데, 이는 외연성에 따르면 그러한 집합은 오직 <mark>
+              하나</mark>만 존재할 수 있기 때문이다. 물론, 외연성에 따르면 아래 또한 성립한다.
+            </p>
+            $$\left \{ a,a,b \right \}=\left \{ a,b \right \}=\left \{b,a  \right \}.$$
+            <p>
+              집합에서는 구성원의 순서 및 상술 횟수를 고려하지 않는다는 점을 지적하는 대목이다.
+              </p>
+              <p>
+                <h4>예제 2.2.</h4>
+                객체들이 있을 때, 이를 하나의 집합으로 모을 수 있다. 예를 들어, 리처드의 형제자매는
+                한 사람을 포함하는 집합이며, $S=\left \{Ruth\right \}$라고 작성할 수 있다. $4$
+                보다 작은 양의 정수의 집합은 $\left \{1,2,3\right \}$이다. 하지만 $\left \{3,2,1\right \}$, 
+                심지어 $\left \{1,2,1,2,3\right \}$으로 작성할 수도 있다. 외연성으로 인해 이들 모두 같은 
+                집합이다. $\left \{1,2,3\right \}$의 구성원은 모두 $\left \{3,2,1\right \}$의 구성원이기도
+                 하며, ($\left \{1,2,1,2,3\right \}$의 구성원이기도 하며) 그 역도 마찬가지다.
+                </p>
+                <p>
+                  종종 구성원들이 공유하는 어떤 속성에 따라 집합을 상술하기도 할 것이다. 다음과 같은 짧은
+                   표기법을 사용한다. $\left \{ x:\varphi \left ( x \right ) \right \}$. $\varphi(x)$는
+                    집합의 구성원이 되기 위해 $x$가 가져야 하는 속성을 가리킨다.
+                  </p>
+                  <p>
+                    <h4>예제 2.3.</h4>
+                    위 예제에서 $S$를 다음처럼 상술하는 것 또한 가능하다.
+                    $$S=\left\{ x:x\;is\;a\;sibling\;of\;Richard \right \}.$$
+                    </p>
+                    <p>
+                      <h4>예제 2.4.</h4>
+                      한 수가 자신의 진약수(proper divisor, 자기 자신을 제외한 양의 약수)의 합과 같고 오직 
+                      그런 경우(iff) 그 수를 <mark>완전하다</mark>(perfect)고 한다. 가령 $6$은 완전한데, 
+                      6의 진약수가 $1,2,3$이며 $6=1+2+3$이기 때문이다. 사실 6은 10보다 작은 유일하게 완전한
+                       양의 정수다. 따라서 외연성을 사용하면 다음처럼 말할 수 있다.
+                       $$\left\{6\right\}=\left\{x:x\;is\;perfect\;and\;0\leq x\leq 10\right\}.$$
+                      </p>
+                      <p>
+                        우측의 표기를 "$x$가 완전하며 $0\leq x\leq 10$인 $x$의 집합"이라고 읽는다. 이런 
+                        동일성은 상술 방법이 집합의 고려 대상이 아니라는 점을 강조한다. 더 일반적으로 말
+                        하면, 외연성은 $\varphi(x)$인 $x$의 <mark>그</mark> 집합이라고 부르는 일을 정당화한다.
+                      </p>
+                      <p>
+                        외연성은 집합의 동일성을 보여주는 하나의 방법을 제공한다. $A=B$라는 것을 보여주려면, 
+                        $x\inA$인 경우 언제든 $x\inB$이기도 하다는 것을, 또 $y\inB$인 경우 항상 $y\inA$이기도 
+                        하다는 것을 보여주면 된다.
+                        </p>
+
+              
+                      
   </body>
 </html>
