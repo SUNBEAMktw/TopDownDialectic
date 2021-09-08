@@ -139,9 +139,9 @@ int main()
         <h4>스트림에 작성하기</h4>
         <mark id="blue">main</mark> 몸체의 첫 번째 문장은 <mark id="red">표현식</mark>(expression)을 실행시킨다. C++에서 표현식은 하나의 결과를 가져오고 하나 이상의 피연산자와 (보통) 하나의 연산자로 구성된다. 이 문장에서 표현식은 출력 연산자를 (<mark id="blue"><< 연산자</mark>를) 사용해 메시지를 표준 출력으로 출력한다.
         <pre><code>std::cout << "Enter two numbers:" << std::endl;</code></pre>
-        <mark id="blue"><<</mark> 연산자는 두 개의 피연산자를 취한다. 좌측 피연산자는 <mark id="blue">ostream</mark> 객체여야만 한다. 우측 피연산자는 출력할 값이다. 연산자는 주어진 <mark id="blue">ostream</mark>에 주어진 값을 기입한다. 출력 연산자의 결과물은 자신의 좌측 피연산자다. 즉, 우리가 기입한 주어진 값에 대한 <mark id="blue">ostream</mark>이 결과물이라는 것이다.
+        <mark id="blue"><<</mark> 연산자는 두 개의 피연산자를 취한다. 좌측 피연산자는 <mark id="blue">ostream</mark> 객체여야만 한다. 우측 피연산자는 출력할 값이다. 연산자는 주어진 <mark id="blue">ostream</mark>에 주어진 값을 기재한다. 출력 연산자의 결과물은 자신의 좌측 피연산자다. 즉, 우리가 기재한 주어진 값에 대한 <mark id="blue">ostream</mark>이 결과물이라는 것이다.
         <p>
-        우리의 출력문에는 <mark id="blue"><<</mark> 연산자가 두 번 쓰였다. 이는 연산자가 좌측 피연산자를 반환할 때, 첫 번째 연산자의 결과가 두 번째 연산자의 좌측 피연산자가 되기 때문이다. 결과적으로, 우리는 출력 요청을 연결지을 수 있다. 따라서, 우리의 표현식은 아래 라인과 동치다.
+        우리의 출력문에는 <mark id="blue"><<</mark> 연산자가 두 번 쓰였다. 이는 연산자가 좌측 피연산자를 반환할 때, 첫 번째 연산자의 결과가 두 번째 연산자의 좌측 피연산자가 되기 때문이다. 결과적으로, 우리는 출력 요청을 연결 지을 수 있다. 따라서, 우리의 표현식은 아래 라인과 동치다.
         </p>
         <pre><code>(std::cout << "Enter two numbers:") << std::endl;</code></pre>
         여기서 각 연산자는 같은 객체를 좌측 피연산자로 갖고 있으며, 그것이 이 경우에는 <mark id="blue">std::cout</mark>이다. 대안적으로, 같은 출력물을 문장 두 개로 조성할 수 있다.
