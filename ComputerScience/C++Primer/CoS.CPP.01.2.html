@@ -149,9 +149,23 @@ int main()
 std::cout << std::endl;</code></pre>
         여기서 첫 번째 출력 연산자가 사용자에게 메시지를 출력한다. 그 메시지는 <mark id="red">스트링 리터럴</mark>(string literal)인데, 이는 큰따옴표로 묶인 일련의 문자다. 큰따옴표 사이의 텍스트는 표준 출력으로 출력된다.
         <p>
-        두 번째 연산자는 <mark id="blue">endl</mark>을 출력하는데, 이는 <mark id="red">조작자</mark>(manipulator)라고 불리는 특별한 값이다. <mark id="blue">endl</mark>이라고 씀으로써 현재 라인을 끝내고 그 장치에 연관된 <mark>버퍼</mark>(buffer)를 비우는 효과를 갖는다. 버퍼를 비우는 일은 지금껏 프로그램이 만들어낸 모든 출력물이 메모리상에 쓰이기를 기다리는 것이 아니라 실제로 출력 스트림에 쓰였다는 점을 보장한다.
+        두 번째 연산자는 <mark id="blue">endl</mark>을 출력하는데, 이는 <mark id="red">조작자</mark>(manipulator)라고 불리는 특별한 값이다. <mark id="blue">endl</mark>이라고 씀으로써 현재 라인을 끝내고 그 장치에 연관된 <mark>버퍼</mark>(buffer)를 비우는 효과를 갖는다. 버퍼를 비우는 일은 지금껏 프로그램이 만들어낸 모든 출력물이 메모리에서 쓰이기를 기다리는 것이 아니라 실제로 출력 스트림에 쓰였다는 점을 보장한다.
         </p>
         </p>
-  
+        <div class="note">
+          프로그래머들은 종종 디버깅 과정에서 문장을 출력한다. 이와 같은 문장은 <mark>언제나</mark> 스트림을 비워야 한다. 그러지 않는다면, 프로그램이 깨졌을 때, 출력물이 버퍼에 남아, 어디서 프로그램이 깨진 건지에 관한 잘못된 추론으로 이끌 수 있기 때문이다.
+        </div>
+        
+        <p>
+  <h4>표준 라이브러리에서 이름 사용하기</h4>
+  주의 깊은 독자라면 이 프로그램이 단지 <mark id="blue">cout</mark>와 <mark id="blue">endl</mark>이 아니라 <mark id="blue">std::cout</mark>와 <mark id="blue">std::endl;</mark>를 사용한다는 점을 눈치챘을 것이다. 접미사(prefix) <mark id="blue">std::</mark>는 <mark id="blue">cout</mark>과 <mark id="blue">endl</mark>과 같은 이름이 <mark id="red">std</mark>라는 이름의 <mark id="red">이름공간</mark>(namespace) 안에 정의되어 있다는 점을 암시한다. 이름공간은 라이브러리 내부의 이름과 우리가 정의한 이름 간의 충돌을 피하게 해준다. 표준 라이브러리에 의해 정의된 모든 이름은 <mark id="blue">std</mark> 이름공간에 있다.
+  <p>
+    이름공간 사용의 부작용은, 우리가 라이브러리에서 이름을 사용할 때, 우리가 <mark id="blue">std</mark> 이름공간에서 가져오고자 하는 이름을 명시해야 한다는 점이다. <mark id="blue">std::cout</mark>에는 범위 연산자(scope operator, <mark id="red">:: 연산자</mark>)가 쓰였으며, 이는 우리가 <mark id="blue">std</mark> 이름공간에서 정의된 이름인 <mark id="blue">cout</mark>을 사용하고 싶다는 뜻이다. § 3.1에는 라이브러리에서 이름을 가져올 수 있는 더 간단한 방법을 소개할 것이다.
+  </p>
+        </p>
+
+<p>
+<h4>스트림에서 읽기</h4>
+</p>
   </body>
 </html>
