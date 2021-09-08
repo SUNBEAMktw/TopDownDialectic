@@ -146,7 +146,7 @@ int main()
         <pre><code>(std::cout << "Enter two numbers:") << std::endl;</code></pre>
         여기서 각 연산자는 같은 객체를 좌측 피연산자로 갖고 있으며, 그것이 이 경우에는 <mark id="blue">std::cout</mark>이다. 대안적으로, 같은 출력물을 문장 두 개로 조성할 수 있다.
         <pre><code>std::cout << "Enter two numbers: ";
-std::cout<<std::endl;</code></pre>
+std::cout << std::endl;</code></pre>
         여기서 첫 번째 출력 연산자가 사용자에게 메시지를 출력한다. 그 메시지는 <mark id="red">스트링 리터럴</mark>(string literal)인데, 이는 큰따옴표로 묶인 일련의 문자다. 큰따옴표 사이의 텍스트는 표준 출력으로 출력된다.
         <p>
         두 번째 연산자는 <mark id="blue">endl</mark>을 출력하는데, 이는 <mark id="red">조작자</mark>(manipulator)라고 불리는 특별한 값이다. <mark id="blue">endl</mark>이라고 씀으로써 현재 라인을 끝내고 그 장치에 연관된 <mark>버퍼</mark>(buffer)를 비우는 효과를 갖는다. 버퍼를 비우는 일은 지금껏 프로그램이 만들어낸 모든 출력물이 메모리상에 쓰이기를 기다리는 것이 아니라 실제로 출력 스트림에 쓰였다는 점을 보장한다.
