@@ -99,21 +99,21 @@
     </div>     
       <hr width="100%" color="#1733a5" noshade>
       <p>
-        C++ 언어에는 입력 및 출력(IO) 수행이 정의된 문장이 없다. 대신, C++는 광범위한 <mark id="red">표준 라이브러리</mark>(standard library)를 통해 IO를(비롯한 여러 기능을) 제공한다. 이 책의 예제를 포함한 다양한 상황에서는 IO 라이브러리에서 기본 개념 몇 가지만 알면 된다.
+        C++ 언어에는 입력 및 출력(IO) 수행이 정의된 문장이 없다. 대신 C++는 광범위한 <mark id="red">표준 라이브러리</mark>(standard library)를 통해 IO를 (비롯한 여러 기능을) 제공한다. 이 책의 예제를 포함한 다양한 상황에서는 IO 라이브러리에서 기본 개념 몇 가지만 알면 된다.
       </p>
       <p>
-        이 책의 예제는 대부분 <mark id="blue">iostream</mark> 라이브러리를 사용한다. <mark id="blue">iostream</mark> 라이브러리에서 근본적인 것은 <mark id="blue">istream</mark>과 <mark id="blue">ostream</mark>이라는 이름의 두 가지 타입으로, 입력 및 출력 스트림(streams)이라는 뜻이라고 말할 수 있다. 스트림이란 IO 장치에서 읽히거나 쓰인 일련의 문자(sequence of character)다. <mark>스트림</mark>이라는 용어는 문자들이 시간의 흐름에 따라 순차적으로 생성되거나 소비되었다는 점을 암시하기 위한 것이다.  
+        이 책의 예제는 대부분 <mark id="blue">iostream</mark> 라이브러리를 사용한다. <mark id="blue">iostream</mark> 라이브러리에서 근본적인 것은 <mark id="blue">istream</mark>과 <mark id="blue">ostream</mark>이라는 이름의 두 가지 타입으로, 입력 및 출력 스트림(streams)이라는 뜻이라고 말할 수 있다. 스트림이란 IO 장치에서 읽히거나 쓰인 일련의 문자(sequence of character)다. <mark>스트림</mark>(흐름)이라는 용어는 문자들이 시간의 흐름에 따라 순차적으로 생성되거나 소비되었다는 점을 암시하기 위한 것이다.  
       </p>
       <p>
         <h4> 표준 입력 및 출력 객체</h4>
-        라이브러리는 네 가지 IO 객체를 정의한다. 입력을 다루기 위해 <mark id="blue">cin</mark>이라는 이름의 <mark id="blue">istream</mark> 타입 객체를 사용한다. 이 객체는 <mark id="red">표준 입력</mark>(standard input)이라고 지시되기도 한다. 출력을 다루기 위해서는 <mark id="blue">cout</mark>이라고 불리는 <mark id="blue">ostream</mark> 객체를 사용한다. 이 객체 또한 <mark id="red">표준 출력</mark>(standard output)이라고 알려져 있다. 라이브러리는 두 가지 또 다른 <mark id="blue">ostream</mark> 객체를 정의하는데, <mark id="blue">cerr</mark>과 <mark id="blue">clog</mark>라고 불리는 (<mark>씨-얼</mark> 그리고 <mark>씨-로그</mark>라고 발음되는) 것들이다. <mark id="blue">cerr</mark>은 <mark id="red">표준 오류</mark>(standard error)라는 것을 지시하기 위해 쓰여, 경보와 오류 메시지를 위한 것이고, <mark id="blue">clog</mark>는 프로그램 실행에 관한 일반적인 정보를 위해 쓰인다.
+        라이브러리는 네 가지 IO 객체를 정의한다. 입력을 다루기 위해 <mark id="blue">cin</mark>이라는 이름의 <mark id="blue">istream</mark> 타입 객체를 사용하는데, 이 객체는 <mark id="red">표준 입력</mark>(standard input)이라고 지시되기도 한다. 출력을 다루기 위해서는 <mark id="blue">cout</mark>이라고 불리는 <mark id="blue">ostream</mark> 객체를 사용한다. 이 객체 또한 <mark id="red">표준 출력</mark>(standard output)이라고 알려져 있다. 라이브러리는 두 가지 또 다른 <mark id="blue">ostream</mark> 객체를 정의하는데, <mark id="blue">cerr</mark>과 <mark id="blue">clog</mark>라고 불리는 (<mark>씨-얼</mark> 그리고 <mark>씨-로그</mark>라고 발음되는) 것들이다. <mark id="blue">cerr</mark>은 <mark id="red">표준 오류</mark>(standard error)라는 것을 지시하기 위해 쓰여, 경보와 오류 메시지를 위한 것이고, <mark id="blue">clog</mark>는 프로그램 실행에 관한 일반적인 정보를 위해 쓰이는 것이다.
         <p>
         일반적으로 시스템은 프로그램이 실행되는 창(window)을 통해 이들 객체와 교류한다. 따라서 <mark id="blue">cin</mark>을 통해 읽을 때, 자료는 프로그램이 실행되는 창을 통해 입력되고, <mark id="blue">cout</mark>, <mark id="blue">cerr</mark>, <mark id="blue">clog</mark>에 적을 때의 출력 또한 같은 창에서 작성된다.   
         </p>  
        </p>
         <p>      
         <h4>IO 라이브러리를 사용하는 프로그램</h4>
-        우리의 서점 프로그램에는 단일의 총합으로 합칠 여러 가지 데이터가 있다. 더 단순한 관련 문제로, 어떻게 두 수를 합칠 수 있을지 살펴보자. IO 라이브러리를 통해, 사용자에게 두 수를 받은 다음 그 합을 출력하도록 <mark id="blue">main</mark> 프로그램을 확장할 수 있다. 
+        우리의 서점 프로그램에는 단일의 총합으로 합칠 여러 가지 자료가 있다. 더 단순한 관련 문제로, 어떻게 두 수를 합칠 수 있을지 살펴보자. IO 라이브러리를 통해, 사용자에게 두 수를 받은 다음 그 합을 출력하도록 <mark id="blue">main</mark> 프로그램을 확장할 수 있다. 
         <pre><code>#include <iostream>
 int main()
 {
@@ -169,11 +169,11 @@ std::cout << std::endl;</code></pre>
 <h4>스트림에서 읽기</h4>
 사용자에게 입력을 요청했으니, 이제는 그 입력을 읽어야겠다. 우선 <mark id="blue">v1</mark>과 <mark id="blue">v2</mark>라는 이름의 두 <mark id="red">변수</mark>(variables)를 정의하여 입력을 붙잡자.
 <pre><code>int v1 = 0, v2 = 0;</code></pre>
-우리는 이 변수들을 <mark id="blue">int</mark> 타입으로 정의했는데, 이는 정수를 표현하는 내장형 타입이다. 우리는 또한 이들을 <mark id="blue">0</mark>으로 <mark id="red">초기화</mark>(initialize)할 것이다. 변수를 초기화할 때, 우리는 변수가 만들어지는 것과 동시에 변수에 의도하는 값을 부여한다.
+이 변수들을 <mark id="blue">int</mark> 타입으로 정의했는데, 이는 정수를 표현하는 내장형 타입이다. 우리는 또한 이들을 <mark id="blue">0</mark>으로 <mark id="red">초기화</mark>(initialize)할 것이다. 변수를 초기화할 때, 우리는 변수가 만들어지는 것과 동시에 변수에 의도하는 값을 부여한다.
 <p>
   다음 문장은 입력을 읽는다.
 <pre><code>std::cin >> v1 >> v2;</code></pre>
-입력 연산자는 (<mark id="blue">>>연산자는</mark>) 출력 연산자와 비슷하게 행동한다. <mark id="blue">isstream</mark>을 좌측 피연산자로 취하며, 객체를 우측 피연산자로 취한다. 주어진 <mark id="blue">isstream</mark>에서 자료를 취한 다음 주어진 객체에서 읽힌 것을 저장한다. 출력 연산자와 마찬가지로, 입력 연산자 또한 자신의 좌측 피연산자를 결과물로 반환한다. 따라서, 이 표현식은 아래와 동치다.
+입력 연산자는 (즉 <mark id="blue">>></mark>연산자는) 출력 연산자와 비슷하게 행동한다. <mark id="blue">isstream</mark>을 좌측 피연산자로 취하며, 객체를 우측 피연산자로 취한다. 또, 주어진 <mark id="blue">isstream</mark>에서 자료를 취한 다음 주어진 객체에서 읽힌 것을 저장한다. 출력 연산자와 마찬가지로, 입력 연산자 또한 자신의 좌측 피연산자를 결과물로 반환한다. 따라서, 이 표현식은 아래와 동치다.
 <pre><code>(std::cin >> v1) >> v2;</code></pre>
 연산자가 자신의 좌측 피연산자를 반환하기에, 우리는 일련의 입력 요청을 하나의 문장으로 묶을 수 있다. 우리의 입력 동작은 <mark id="blue">std::cin</mark>에서 두 가지 값을 읽어, 첫 번째 값을 <mark id="blue">v1</mark>에 저장하고 두 번째 값을 <mark id="blue">v2</mark>에 저장한다. 달리 말해, 우리의 입력 연산자는 다음처럼 실행된다.
 <pre><code>std::cin >> v1;
@@ -186,7 +186,7 @@ std::cin >> v2;</code></pre>
 결과물 출력이 남았다.
 <pre><code>std::cout << "The sum of " << v1 << " and " << v2
           << " is " << v1 + v2 << std::endl;</code></pre>
-이 문장은, 입력 요청 문장보다는 길지만, 개념적으로 유사하다. 각 피연산자를 표준 출력상에 출력한다. 이 예제에서 흥미로운 점은 바로 피연산자가 다른 종류의 값을 갖는다는 것이다. 어떤 피연산자는 스트링 리터럴로, <mark id="blue">"The sum of "</mark>를 예로 들 수 있다. 다른 종류로는 <mark id="blue">int</mark> 값이 있으며, <mark id="blue">v1</mark>, <mark id="blue">v2</mark>, 그리고 연산 표현식 <mark id="blue">v1 + v2</mark>의 검사 결과가 그 예다. 라이브러리는 다양한 판본의 출력과 입력 연산자를 정의하여 이들처럼 다양한 유형의 피연산자를 다룰 수 있도록 만든다.
+이 문장은 입력 요청 문장보다 길긴 하지만, 개념적으로 유사하다. 각 피연산자가 표준 출력으로 출력된다. 이 예제에서 흥미로운 점은 바로 피연산자가 다른 종류의 값을 갖는다는 것이다. 어떤 피연산자는 스트링 리터럴로, <mark id="blue">"The sum of "</mark>를 예로 들 수 있다. 다른 종류로는 <mark id="blue">int</mark> 값이 있으며, <mark id="blue">v1</mark>, <mark id="blue">v2</mark>, 그리고 연산 표현식 <mark id="blue">v1 + v2</mark>의 검사 결과가 그 예다. 라이브러리는 다양한 판본의 출력과 입력 연산자를 정의하여 이들처럼 다양한 유형의 피연산자를 다룰 수 있도록 만든다.
 </p>
 
 <div class="note">
