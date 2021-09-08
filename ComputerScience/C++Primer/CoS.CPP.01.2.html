@@ -123,8 +123,17 @@ int main()
     std::cout << "The sum of " << v1 << " and " << v2
               << " is " << v1 + v2 << std::endl;
     return 0;
-}</pre></code>
-      </p>
+}</code></pre>
+        이 프로그램은 사용자의 스크린에 다음 문장을 출력하면서 시작한다.
+        <pre><code>Enter two numbers: </code></pre>
+        그런 다음 사용자에게서 입력을 기다린다. 만약 사용자가 아래처럼 입력한 다음 개행(newline)을 입력했다면
+        <pre><code>3 7</code></pre>
+        프로그램은 다음과 같은 출력을 생산한다.
+        <pre><code>The sum of 3 and 7 is 10</code></pre>
+        프로그램 첫 라인인 아래 라인은
+        <pre><code>#include <iostream></code></pre>
+        컴파일러에 우리가 <mark id="blue">iostream</mark> 라이브러리를 사용하고 싶다고 전달한다. 꺾쇠 안의 이름은 (이 경우에는 <mark id="blue">iostream</mark>인데) <mark id="red">헤더</mark>(header)를 지시한다. 라이브러리를 사용하는 모든 프로그램은 관련 헤더를 포함해야 한다. <mark id="blue">#include</mark>는 단일 라인에서 작성되어야 하는데, 곧 헤더 이름과 <mark id="blue">#include</mark>가 같은 문장에 나타나야 한다는 말이다. 일반적으로, <mark id="blue">#include</mark>는 모든 함수 바깥에 나타나야 한다. 특징적으로는, 모든 <mark id="blue">#include</mark>를 소스 파일 시작 부분에 배치한다.
+        </p>
   
   </body>
 </html>
