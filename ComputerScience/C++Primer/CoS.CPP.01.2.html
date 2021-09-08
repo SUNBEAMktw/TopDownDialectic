@@ -111,6 +111,20 @@
         일반적으로 시스템은 프로그램이 실행되는 창(window)을 통해 이들 객체와 교류한다. 따라서 <mark id="blue">cin</mark>을 통해 읽을 때, 자료는 프로그램이 실행되는 창을 통해 입력되고, <mark id="blue">cout</mark>, <mark id="blue">cerr</mark>, <mark id="blue">clog</mark>에 적을 때의 출력 또한 같은 창에서 작성된다.   
         </p>  
        </p>
+        <p>      
+        <h4>IO 라이브러리를 사용하는 프로그램</h4>
+        우리의 서점 프로그램에는 단일의 총합으로 합칠 여러 가지 데이터가 있다. 더 단순한 관련 문제로, 어떻게 두 수를 합칠 수 있을지 살펴보자. IO 라이브러리를 통해, 사용자에게 두 수를 받은 다음 그 합을 출력하도록 <mark id="blue">main</mark> 프로그램을 확장할 수 있다. 
+        <pre><code>#include <iostream>
+        int main()
+      {
+        std::cout << "Enter two numbers:" << std::endl;
+        int v1 = 0, v2 = 0;
+        std::cin >> v1 >> v2;
+        std::cout << "The sum of " << v1 << " and " << v2
+                  << " is " << v1 + v2 << std::endl;
+                  return 0;
+      }</pre></code>
+      </p>
   
   </body>
 </html>
