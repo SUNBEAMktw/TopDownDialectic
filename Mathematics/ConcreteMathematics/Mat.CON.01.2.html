@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>CON.01.2</title>
+    <link rel=" shortcut icon" href="../../favicon (3).ico">
+    <link rel="icon" href="../../favicon (3).ico">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+  </head>
+  
+  <body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <center>
+      "이제 나는 <em><a href="../../index.html">
+      어떠한 저항도 하지 않기로</a></em> 결심했다."
+      <br>1914년 8월 26일, 비트겐슈타인.<br>
+      
+      <hr width="50%" color="#1733a5" noshade>
+      
+      <a href="../../Logic/Log.html">논리학</a>
+      &nbsp;
+      <mark id="red">수학</mark> 
+      &nbsp;
+      <a href="../../Physics/Phy.html">물리학</a>
+      &nbsp;
+      <a href="../../ComputerScience/CoS.html">전산학</a> 
+      &nbsp;
+      <a href="../../ComputerEngineering/CoE.html">컴퓨터공학</a>
+      &nbsp;
+      <a href="../../MediaStudies/MeS.html">매체학</a>
+      &nbsp;
+      <a href="../../Music/Mus.html">음악</a>
+      &nbsp;
+      <a href="../../Philosophy/Phi.html">철학</a>    
+      <hr width="70%" color="#1733a5" noshade>  
+    </center>
+    
+    <div class="row">
+      <div class="left">
+        <ul>
+          <li><mark id="red">『구체수학』</mark></li>
+          <li><a href="../CalculusVolume1/Mat.CA1.html">『미적분 1』</a></li>
+          <li><a href="../CalculusVolume2/Mat.CA2.html">『미적분 2』</a></li>
+          <li><a href="../AnalysisVolume1/Mat.AN1.html">『해석학 1』</a></li>
+          <li><a href="../AnalysisVolume2/Mat.AN2.html">『해석학 2』</a></li>
+          <li><a href="../Real_andComplexAnalysis/Mat.RCA.html">『실수 및 복소수 해석학』</a></li>
+          <li><a href="../GeneralTopology/Mat.GTP.html">『일반위상수학』</a></li>
+        </ul>
+      </div>
+      <div class="center">
+        <ul>
+          <li>1장 <mark id="red">재귀적인 문제들</mark></li>
+          <li>2장 <a href="Mat.CON.02.html">합</a></li>
+          <li>3장 <a href="Mat.CON.03.html">정수 함수</a></li>
+          <li>4장 <a href="Mat.CON.04.html">정수론</a></li>
+          <li>5장 <a href="Mat.CON.05.html">이항계수</a></li>
+          <li>6장 <a href="Mat.CON.06.html">특별한 수들</a></li>
+          <li>7장 <a href="Mat.CON.07.html">생성함수</a></li>
+          <li>8장 <a href="Mat.CON.08.html">이산 확률</a></li>
+          <li>9장 <a href="Mat.CON.09.html">점근법</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li>1.1 <a href="Mat.CON.01.1.html">하노이의 탑</a></li>
+          <li>1.2 <mark id="red">평면의 선들</mark></li>
+          <li>1.3 <a href="Mat.CON.01.3.html">요세푸스 문제</a></li>
+          <li><a href="Mat.CON.01.ex.html">연습문제</a></li>
+        </ul>
+      </div>
+      </div>
+      <hr width="100%" color="#1733a5" noshade>
+      
+<div class="note">
+피자 칼로 피자를 $n$번 직선으로 자른다고 할 때 피자 조각이 최대 몇 개나 나올까?
+좀 더 학술적으로 표현하자면, 평면에 놓인 $n$개의 선(직선)으로 정의되는 영역의 최대 개수 $L_{n}$이 무엇인가?
+</div>
+
+    <p>
+    <h4>우선 작은 사례 고찰</h4>
+    <center>
+      <img src="../../photo/CON/CON_1.2_1.png" width="70%">
+    </center>
+    </p>
+  
+  <p>
+  <h4>(틀린) 첫 추측</h4>
+  $$L_{n}=2^{n}!?$$
+  </p>
+
+  <p>
+    <h4>반례</h4>
+세 번째 선을 추가하면 <mark id="red">하나의 직선으로 기존 영역 중 최대 세 개의 영역을 둘로 분할 할 수 있음을</mark> 알 수 있음.
+<img src="../../photo/CON/CON_1.2_2.png" width="70%">
+$$L_{3}=4+3=7.$$
+  </p>
+
+<p>
+  <h4>교훈과 부등식</h4>
+<div id="note">
+  만일 <mark id="red">$n$번째 선이 분할하는 기존 영역이 $k$개라면</mark>, 그리고 오직 그런 경우, <mark id="red">그 선에 의해 영역의 수는 $k$만큼 증가</mark>.
+</div>
+<ol>
+  <li>두 선은 많아야 하나의 점에서 만남.</li>
+  <li>따라서 $n$번째 새 선 하나는 기존의 선 $n-1$개와 많아야 $n-1$개의 서로 다른 점에서 교차.</li>
+  <li>$k\leq n$임은 자명.</li>
+</ol>
+$$L_{n}\leq L_{n-1}+n,\;for\;n>0.$$
+</p>
+
+<p>
+  <h4>부등식을 등식으로</h4>
+<ul>
+  <li>$n$번째 선을 기존 그 어떤 선과도 평행하지 않게<br>
+  -> 기존의 모든 선과 교차</li>
+  <li>$n$번째 선이 그 어떤 기존 교차점도 지나지 않게<br>
+    -> 기존 선들과 모두 다른 점에서 교차</li>
+</ul>
+$$ \begin{align} L_{0}&=1; \\ L_{n}&=L_{n-1}+n,\;for\;n>0.\end{align} \tag{1.4} $$
+</p>
+
+<p>
+<h4>펼치거나(unfold)</h4>
+$$ \begin{align} L_{n}&=L_{n-1}+n \\ &=L_{n-2}+(n-1)+n \\ &=L_{n-3}+(n-2)+(n-2)+n \\ \vdots \\ &=L_{0}+1+2+ \dotso + (n-2) + (n-1) + n \\ &= 1+ S_{n}\; where\; S_{n}=1+2+3+\dotso+(n-1)+n.\end{align}$$
+<mark id="red">$L_{n}$은 처음 $n$개의 정수들의 합 $S_{n}$에 $1$을 더한 것</mark>.
+<h4>풀어보기(unwind)</h4>
+$$ \begin{align} 2S_{n}&=(n+1)+(n+1)+(n+1)+\dotso\+(n+1)+(n+1)//S_{n}+S_{n}&= 1 + n + 2 + (n-1) + 3 + (n-2) + \dotso + (n-1) + 2 + n + 1. \end{align}$$
+$$ \begin{align} S_{n}=\frac{n(n+1)}{2},\;for\;n\geq 0.\end{align} \tag{1.5} $$
+$$ \begin{align} L_{n}=L_{n-1}+n=\left ( \frac{1}{2}(n-1)n+1 \right )+n=\frac{1}{2}n(n+1)+1.\end{align} \tag{1.6} $$
+</p>
+
+<p>
+  <h4>지그(ZIG)!</h4>
+평면에 놓인 $n$개의 꺾인 선들이 정의하는 영역들의 최대 개수 $Z_{n}$은 무엇인가? 
+  <h4>작은 사례들</h4>
+<svg width="160" height="130">
+    <g>
+        <path d="M 40,60 L 160,10" stroke="#000"></path>
+        <path d="M 40,60 L 160,120" stroke="#000"></path>
+        <text x="30" y="50"> 1 </text>
+        <text x="140" y="60"> 2 </text>
+    </g>
+</svg>
+$$Z_{1}=2$$
+<svg width="160" height="130">
+    <g>
+        <path d="M 40,60 L 160,20" stroke="#000"></path>
+        <path d="M 40,60 L 160,90" stroke="#000"></path>
+        <path d="M 100,120 L 60,10" stroke="#000"></path>
+        <path d="M 100,120 L 130,10" stroke="#000"></path>
+        <text x="60" y="100"> 1 </text>
+        <text x="90" y="30"> 2 </text>
+        <text x="140" y="20"> 3 </text>
+        <text x="140" y="70"> 4 </text>
+        <text x="90" y="90"> 5 </text>
+        <text x="65" y="65"> 6 </text>
+        <text x="90" y="60"> 7 </text>
+    </g>
+</svg>
+$$Z_{2}=7$$
+<mark id="red"> 하나의 꺾인 선은 두 개의 직선이 각자 영역을 둘로 나누되, "두" 직선의 교점 너머에 있는 영역들이 하나로 합쳐지는 효과를 낸다는 점</mark>.
+<svg width="160" height="130">
+    <g>
+        <path d="M 160,10 L 85,65" stroke="#000"></path>
+        <path d="M 160,120 L 85,65" stroke="#000"></path>
+        <path stroke-dasharray="5,5" d="M 10,10 L 85,65" stroke="#000"></path>
+        <path stroke-dasharray="5,5" d="M 10,120 L 85,65" stroke="#000"></path>
+        <text x="130" y="65"> 1 </text>
+        <text x="80" y="100"> 2 </text>
+        <text x="30" y="65"> 3 </text>
+        <text x="80" y="20"> 4 </text>
+    </g>
+</svg>
+$$ \begin{align} Z_{n}=L_{2n}-2n&=2n(2n+1)/2+1-2n//&=2n^{2}-n+1.\;for\;n\geq 0.\end{align} \tag{1.7} $$
+</p>
+  
+
+  </body>      
+</html>
