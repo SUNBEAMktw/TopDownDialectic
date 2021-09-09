@@ -114,7 +114,7 @@
         <p>      
         <h4>IO 라이브러리를 사용하는 프로그램</h4>
         우리의 서점 프로그램에는 단일의 총합으로 합칠 여러 가지 자료가 있다. 더 단순한 관련 문제로, 어떻게 두 수를 합칠 수 있을지 살펴보자. IO 라이브러리를 통해, 사용자에게 두 수를 받은 다음 그 합을 출력하도록 <mark id="blue">main</mark> 프로그램을 확장할 수 있다. 
-        <pre><code>#include <iostream>
+        <pre><code>#include &lt;iostream&gt;
 int main()
 {
     std::cout << "Enter two numbers:" << std::endl;
@@ -131,7 +131,7 @@ int main()
         프로그램은 다음과 같은 출력을 생산한다.
         <pre><code>The sum of 3 and 7 is 10</code></pre>
         프로그램 첫 라인인 아래 라인은
-        <pre><code>#include <iostream></code></pre>
+        <pre><code>#include &lt;iostream&gt;</code></pre>
         컴파일러에 우리가 <mark id="blue">iostream</mark> 라이브러리를 사용하고 싶다고 전달한다. 꺾쇠 안의 이름은 (이 경우에는 <mark id="blue">iostream</mark>인데) <mark id="red">헤더</mark>(header)를 지시한다. 라이브러리를 사용하는 모든 프로그램은 관련 헤더를 포함해야 한다. <mark id="blue">#include</mark>는 단일 라인에서 작성되어야 하는데, 곧 헤더 이름과 <mark id="blue">#include</mark>가 같은 문장에 나타나야 한다는 말이다. 일반적으로, <mark id="blue">#include</mark>는 모든 함수 바깥에 나타나야 한다. 특징적으로는, 모든 <mark id="blue">#include</mark>를 소스 파일 시작 부분에 배치한다.
         </p>
         
