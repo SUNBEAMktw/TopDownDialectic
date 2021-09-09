@@ -149,7 +149,7 @@ while (val <= 10) {
 }</code></pre>
 블록이란 중괄호로 묶이는 0개 이상의 일련의 문장이다. 
 블록 또한 하나의 문장으로, 문장이 요구되는 곳이라면 어디든 쓰일 수 있다.
-이 블록의 첫 번째 문장은 복합 대입 연산자(<mark id="red">+=</mark>)를 사용한다.
+이 블록의 첫 번째 문장은 복합 대입 연산자(compound assignment operator, <mark id="red">+=</mark>)를 사용한다.
 이 연산자는 우측 피연산자를 자신의 좌측 피연산자에 더한 다음 그 결과를 좌측 피연산자에 저장한다.
 본질적으로 다음처럼 덧셈을 수행하는 것과 다를 바가 없다.
 <pre><code>sum = sum + val;   // assign sum + val to sum</code></pre>
@@ -157,8 +157,8 @@ while (val <= 10) {
     </p>
     <p>
     다음 문장은 다음과 같다.
-<pre><code>++val;   // add 1 to val;
-이 문장은 전위 증감 연산자를 (<mark id="red">++</mark>연산자를) 사용한다.
+<pre><code>++val;   // add 1 to val;</code></pre>
+이 문장은 전위 증감 연산자를 (prefix increment operator, <mark id="red">++</mark>연산자를) 사용한다.
 증감 연산자는 피연산자에 <mark id="blue">1</mark>을 더한다.
 <mark id="blue">++val</mark>이라고 적는 일은 <mark id="blue">val = val + 1</mark>이라고 적는 것과 같다.
     </p>
