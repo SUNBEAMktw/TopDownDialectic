@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>OLT.01.02</title>
+    <link rel=" shortcut icon" href="../../favicon (3).ico">
+    <link rel="icon" href="../../favicon (3).ico">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+  </head>
+
+  <body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <center>
+      "이제 나는 <em><a href="../../index.html">
+      어떠한 저항도 하지 않기로</a></em> 결심했다."
+      <br>1914년 8월 26일, 비트겐슈타인.<br>
+
+      <hr width="50%" color="#1733a5" noshade>
+
+      <mark id="red">논리학</mark>
+      &nbsp;
+      <a href="../../Mathematics/Mat.html">수학</a>
+      &nbsp;
+      <a href="../../Physics/Phy.html">물리학</a>
+      &nbsp;
+      <a href="../../ComputerScience/CoS.html">전산학</a>
+      &nbsp;
+      <a href="../../ComputerEngineering/CoE.html">컴퓨터공학</a>
+      &nbsp;
+      <a href="../../MediaStudies/MeS.html">매체학</a>
+      &nbsp;
+      <a href="../../Music/Mus.html">음악</a>
+      &nbsp;
+      <a href="../../Philosophy/Phi.html">철학</a>
+
+      <hr width="70%" color="#1733a5" noshade>
+    </center>
+
+    <div class="row">
+
+    <div class="left">
+    <ul>
+      <li><mark id="red">『공개 논리학 텍스트』</mark></li>
+    </ul>
+    </div>
+
+    <div class="center">
+    <ul>
+      <li>01부 <mark id="red">소박한 집합론</mark></li>
+      <li>02부 <a href="Log.OLT.02.html">명제논리</a></li>
+      <li>03부 <a href="Log.OLT.03.html">1계 논리</a></li>
+      <li>04부 <a href="Log.OLT.04.html">모델이론</a></li>
+      <li>05부 <a href="Log.OLT.05.html">계산가능성</a></li>
+      <li>06부 <a href="Log.OLT.06.html">튜링기계</a></li>
+      <li>07부 <a href="Log.OLT.07.html">불완전성</a></li>
+      <li>08부 <a href="Log.OLT.08.html">2계 논리</a></li>
+      <li>09부 <a href="Log.OLT.09.html">람다 계산</a></li>
+      <li>10부 <a href="Log.OLT.10.html">다계 논리</a></li>
+      <li>11부 <a href="Log.OLT.11.html">정상적 양상논리</a></li>
+      <li>12부 <a href="Log.OLT.12.html">직관주의 논리</a></li>
+      <li>13부 <a href="Log.OLT.13.html">반사실적 조건문</a></li>
+      <li>14부 <a href="Log.OLT.14.html">방법론</a></li>
+      <li>15부 <a href="Log.OLT.15.html">역사</a></li>n
+      <li>16부 <a href="Log.OLT.16.html">참고 자료</a></li>
+    </ul>
+    </div>
+  
+    <div class="right">
+    <ul>
+      <li>1장 <mark id="red">집합</mark></li>
+      <li>2장 <a href="Log.OLT.01.02.html">관계</a></li>
+      <li>3장 <a href="Log.OLT.01.03.html">함수</a></li>
+      <li>4장 <a href="Log.OLT.01.04.html">집합의 크기</a></li>
+      <li>5장 <a href="Log.OLT.01.05.html">산술</a></li>
+      <li>6장 <a href="Log.OLT.01.06.html">무한집합</a></li>
+    </ul>
+      <hr width="100%" color="#1733a5" noshade>
+    <ul>
+      <li>1.1 <a href="Log.OLT.01.01.html">외연성</mark></li>
+      <li>1.2 <mark id="red">부분집합과 멱집합</mark></li>
+      <li>1.3 <a href="Log.OLT.01.01.03.html">중요한 집합들</a></li>
+      <li>1.4 <a href="Log.OLT.01.01.04.html">합집합과 교집합</a></li>
+      <li>1.5 <a href="Log.OLT.01.01.05.html">쌍, 짝, 데카르트 곱</a></li>
+      <li>1.6 <a href="Log.OLT.01.01.06.html">러셀 역설</a></li>
+      <li><a href="Log.OLT.01.01.ex.html">연습문제</a></li>
+    </ul>
+    </div>
+    </div>
+    <hr width="100%" color="#1733a5" noshade>
+    <p>
+      집합을 비교할 수도 있겠다.
+      할 수 있는 비교 가운데 명백한 것으로는 다음을 꼽을 수 있다.
+      <mark>한 집합 안에 있는 모든 것이 다른 집합에도 있다.</mark>
+      새로운 표기법 도입 과정에 다분히 비중을 차지할 상황이다.
+    </p>
+    <p>
+      <h4>정의 2.5 (부분집합).</h4>
+    집합 $A$의 모든 구성원이 집합 $B$의 구성원이기도 할 때, $A$를 $B$dml <mark id="red">부분집합</mark>(subset)이라고 부르며, $A\subseteq B$라고 적는다.
+    만약 $A$가 $B$의 부분지밥이 아니라면 $A\nsubseteq  B$라고 적는다.
+    만약 $A\subseteq B$지만 $A\neq B$라면 $A\subsetneq B$라고 적으며 $A$를 $B$의 <mark>진부분집합</mark>이라고 부른다.
+    </p>
+  <p>
+  <h4>예제 2.6.</h4>
+  모든 집합은 자기 자신의 부분집합이며, $\varnothing$은 모든 집합의 부분집합이고, 짝수 집합은 자연수 집합의 부분집합이다. 
+  더불어 $\left \{ a, b \right \}\subseteq \left \{ a,b,c \right \}$이다.
+  다만 $\left \{ a,b,e \right \}$는 $\left \{ a,b,c \right \}$의 부분집합이 아니다.
+  </p>
+<p>
+<h4>예제 2.7.</h4>
+$2$는 정수 집합의 구성원인데 반해 짝수 집합은 정수 집합의 부분집합이다. 
+하지만 한 집합은 어떤 다른 집합의 구성원인 동시에 부분집합일 수도 있다.
+가령 $\left \{ 0 \right \}\in\left \{ 0, \left \{ 0 \right \} \right \}$인 동시에 $\left \{ 0 \right \}\subseteq\left \{ 0, \left \{ 0 \right \} \right \}$인 것이 가능하다.
+</p>
+<p>
+  외연성은 집합의 동일성 기준을 제공한다. 
+  $A$의 모든 구성원이 $B$의 구성원이기도 하며 그 역 또한 마찬가지일 때 그리고 오직 그런 경우(iff) $A=B$다.
+  "부분집합"의 정의는 $A\subseteq B$를 정확히 이 기준의 전반부 절반에 따라 정의한다. 
+  $A$의 모든 구성원이 $B$의 구성원이기도 하다는 것.
+  물론 이 정의는 $A$와 $B$를 바꿔도 적용된다.
+  즉 $B$의 모든 구성원이 $A$의 구성원이기도 할 떄 그리고 오직 그런 경우 $B\subseteq A$다.
+  이는 곧 외연성에서 "역 또한 마찬가지"(vice versa)라는 부분과 정확히 맞물린다.
+  달리 말해 외연성은 집합들이 서로 부분집합인 경우 그리고 오직 그런 경우에만 집합들이 같다는 것을 함의한다.
+  </p>
+<p>
+<h4><mark>명제 2.8.</mark></h4>
+$A\subseteq B$인 동시에 $B\subseteq A$일 때 그리고 오직 그런 경우 $A=B$다.
+</p>
+<p>
+  추가적인 표기법을 도입하기 좋은 기회다. 
+  $A$를 $B$의 부분집합이라고 정의하며 "$A$의 모든 구성원은 ..."이라고 말할 때 "..."를 "$B$의 구성원"이라고 채웠다.
+  다만 이는 표현의 일반적인 <mark>모양</mark>(shape)에 그치므로 형식적인 표기법의 소개가 도움이 되겠다.
+</p>
+<p>
+<h4>정의 2.9.</h4>
+$(\forallx \in A)\varphi$는 \forallx(x \in A \to \varphi)$를 축약한다.
+이와 유사하게 $(\exists x \in A)\varphi$는 $(x \in A \land \varphi)$를 축약한다.
+</p>
+<p>
+  이 표기법을 사용함으로써 $(\forallx \in A)x \in B$이고 오직 그런 경우 $A \subseteq B%라고 말할 수 있다.
+  이어서 집합의 한 특정한 유형에 관해 생각하겠다. 이것은 주어진 한 집합의 모든 부분집합의 집합이다.
+</p>
+<p>
+<h4>정의 2.10 (멱집합).</h4>
+집합 $A$의 모든 부분집합을 포함하는 집합을 <mark id="red">$A$의 멱집합</mark>(power set of $A$)이라고 부르며 $\wp(A)$라고 적는다.
+</p>
+<p>
+  <h4>예제 2.11.</h4>
+\left \{ a, b, c \right \}의 모든 가능한 부분집합은 무엇인가? 
+$\varnothing, \left \{ a\right \}, \left \{b \right \},\left \{c \right \},\left \{ a, b \right \},\left \{ a, c \right \} ,\left \{ b, c \right \},\left \{ a, b,c \right \}이다.
+이 부분집합 전체의 집합은 $\wp(\left \{ a, b,c \right \})$이다.
+</p>
+<p>
+  $\wp(\left \{ a, b,c \right \})=\left \{\varnothing,\left \{ \left \{ a \right \},\left \{ b \right \},\left \{c \right \},\left \{ a, b \right \},\left \{ a, c \right \},\left \{ a, b,c \right \} \right \} \right \}$
+</p>
+</body>
+</html>
