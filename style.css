@@ -63,5 +63,5 @@ mark{
   background: rgb(23, 51, 165);
 }
 hr{
-  color: rgb(255, 121, 77) !important;
+  border-top: 3px solid #ff794d !important;
 }
