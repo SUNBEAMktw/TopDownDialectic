@@ -111,7 +111,7 @@
     </p>
     <p>
     <h4>프로그램 소스 파일 명명 관습</h4>
-    커맨드-라인 인터페이스건 IDE건 대부분의 컴파일러는 프로그램 소스 코드가 하나 이상의 파일에 저장될 것으로 예상한다. 프로그램 파일은 보통 <mark>소스 파일(source file)</mark>이라고 지시된다. 많은 시스템상에서 소스 파일의 이름은 접미사(suffix)로 끝나는데, 이는 하나 이상의 문자로 이어지는 점(period) 하나다. 접미사는 시스템에게 파일이 C++ 프로그램이라고 알려준다. 다른 컴파일러는 다른 접미사 관행을 따른다. 가장 일반적인 것은 <mark id="blue">.cc</mark>, <mark id="blue">.cxx</mark>, <mark id="blue">.cpp</mark>, <mark id="blue">.cp</mark>, <mark id="blue">.c</mark>다.
+    커맨드-라인 인터페이스건 IDE건 대부분의 컴파일러는 프로그램 소스 코드가 하나 이상의 파일에 저장될 것으로 예상한다. 프로그램 파일은 보통 <mark>소스 파일(source file)</mark>이라고 지시된다. 많은 시스템상에서 소스 파일의 이름은 접미사(suffix)로 끝나는데, 이는 하나 이상의 문자로 이어지는 점(period) 하나다. 접미사는 시스템에게 파일이 C++ 프로그램이라고 알려준다. 접미사 관행은 컴파일러마다 다르다. 가장 일반적인 것은 <mark id="blue">.cc</mark>, <mark id="blue">.cxx</mark>, <mark id="blue">.cpp</mark>, <mark id="blue">.cp</mark>, <mark id="blue">.c</mark>다.
     </p>
   <p>
   <h4>커맨드 라인에서 컴파일러 실행하기</h4>
@@ -121,10 +121,10 @@
   <pre><code>$ CC prog1.cc $</pre></code>
 </p>
 <p>
-  <mark id="blue">CC</mark>는 컴파일러를 명명하고 <mark id="blue">$</mark>은 시스템 프롬프트다. 컴파일러는 실행 가능한 파일을 만들어낸다. 윈도우즈 시스템상에서 실행 가능한 파일은 <mark id="blue">prog1.exe</mark>라고 명명된다. UNIX 컴파일러에서는 실행 가능한 파일이 <mark id="blue">a.out</mark>이라고 명명된다.
+  <mark id="blue">CC</mark>는 컴파일러를 명명하는 것이고 <mark id="blue">$</mark>은 시스템 프롬프트다. 컴파일러는 실행 가능한 파일을 만들어낸다. 윈도우즈 시스템상에서 실행 가능한 파일은 <mark id="blue">prog1.exe</mark>라고 명명된다. UNIX 컴파일러에서는 실행 가능한 파일이 <mark id="blue">a.out</mark>이라고 명명된다.
 </p>
 <p>
-  윈도우즈상에서 실행 가능한 파일을 실행할 때, 실행 가능한 파일 이름을 제공하며 <mark id="blue">.exe</mark> 파일 확장자는 무시할 수 있다.
+  윈도우즈상에서 실행 가능한 파일을 실행할 때, 실행 가능한 파일 이름을 제공하는 과정에서 <mark id="blue">.exe</mark> 파일 확장자는 무시할 수 있다.
 </p>
   <p>
    <pre><code>$prog1</pre></code> 
@@ -184,7 +184,7 @@ C++ 컴파일러 실행을 위해 쓰이는 명령은 컴파일러와 운영체�
 여기서 <mark id="blue">C:\Users\me\Programs</mark>는 시스템 프롬프트이며<mark id="blue"> \Users\me\Programs</mark>는 현재 디렉터리의 (다른 말로 현재 폴더의) 이름이다. <mark id="blue">cl</mark> 명령은 컴파일러를 언급하고 <mark id="blue">/EHsc</mark>는 컴파일러 옵션으로서 표준 예외 처리를 작동시킨다. 마이크로소프트 컴파일러는 자동적으로 실행 가능한 파일을 첫 소스 파일에 상응하는 이름으로 만든다. 실행 가능한 파일은 <mark id="blue">.exe</mark> 접미사를 갖고 있으며 소스 파일 이름과 같은 이름을 갖고 있다. 이 경우, 실행 가능한 파일은 <mark id="blue">prog1.exe</mark>라고 명명되었다.
 </p>
 <p>
-컴파일러에는 주로 문제적인 설계에 대한 경고를 만드는 옵션이 포함된다. 이런 옵션을 사용하는 것은 주호 좋은 생각이다. 우리가 선호하는 것은 GNU 컴파일러의 경우 <mark id="blue">-Wall</mark>를, 마이크로소프트 컴파일러의 경우 <mark id="blue">/W4</mark>를 사용하는 것이다.
+컴파일러에는 주로 문제적인 설계에 대한 경고를 만드는 옵션이 포함된다. 이런 옵션을 사용하는 것은 주로 좋은 생각이다. 우리가 선호하는 것은 GNU 컴파일러의 경우 <mark id="blue">-Wall</mark>를, 마이크로소프트 컴파일러의 경우 <mark id="blue">/W4</mark>를 사용하는 것이다.
 </p>
 <p>
 더 알고 싶다면 컴파일러 설명서를 참고할 것.
