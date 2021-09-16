@@ -5,7 +5,7 @@ body{
   background-color: black;
   color: white;
   font-family: 'Noto Serif KR', serif;
-  font-size: 1vw;
+  font-size: 2vw;
 }
       div.row {
         display: flex;
@@ -33,20 +33,20 @@ div.note{
    display:block;
 }
 ::selection { 
-  color: rgb(23, 51, 165);
+  color: black;
   background: rgb(248, 220, 9);
 }
 a:link{
-  color: rgb(23, 51, 165);
+  color: rgb(255, 121, 77);
 }
 a:visited{
-  color: rgb(23, 51, 165);
+  color: rgb(255, 121, 77);
 }
 a:hover{
-  color: rgb(23, 51, 165);
+  color: rgb(255, 121, 77);
 }
 a:active{
-  color: rgb(23, 51, 165);
+  color: rgb(255, 121, 77);
 }
 
 mark{
