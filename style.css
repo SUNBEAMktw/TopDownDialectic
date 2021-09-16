@@ -5,6 +5,7 @@ body{
   background-color: black;
   color: white;
   font-family: 'Noto Serif KR', serif;
+  font-size: 2vw;
 }
       div.row {
         display: flex;
