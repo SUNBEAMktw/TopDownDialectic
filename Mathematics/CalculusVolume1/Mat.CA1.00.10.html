@@ -156,28 +156,34 @@
     <p>
       합집합 및 교집합 연산은 집합의 유한 또는 무한한 모음으로 연장될 수 있다.
       $\mathcal{F} $를 집합의 텅 비지 않은 클래스(class)로 두자.
-      $ \mathcal{F} $ 내부의 모든 집합의 합집합은 $\mathcal{F} $
-      
+      $ \mathcal{F} $ 내부의 모든 집합의 합집합은 $\mathcal{F} $ 내부의 집합들 가운데 적어도 하나라도 속하는 원소들의 집합으로 정의된다.
+      다음 기호로 표기된다.  
     </p>
     
-    $$ $$ 
+    $$ \bigcup_{A\in\mathcal{F}}A. $$ 
     
     <p>
+      $\mathcal{F} $가 집합들의 유한한 모임이라면, 즉 $\mathcal{F}=\left \{A_{1},A_{2},\ldots,A_{n} \right \}$이라면, 다음처럼 적는다.
     </p>
     
-    $$ $$
+    $$ \bigcup_{A\in\mathcal{F}}A = \bigcup_{k=1}^{n}A_{k}=A_{1} \cup A_{2} \cup \ldots \cup A_{n}.$$
     
     <p>
+      유사하게, $\mathcal{F}$ 내부의 모든 집합의 교집합은 $\mathcal{F} $ 내부의 모든 집합에 속하는 원소들의 집합으로 정의된다.
+      다음 기호로 표기된다.
     </p>
     
-    $$ $$
+    $$ \bigcap_{A\in\mathcal{F}}A. $$
     
     <p>
+      유한 모임인 경우 다음처럼 적는다.
     </p>
     
-    $$ $$
+    $$ \bigcap_{A\in\mathcal{F}}A = \bigcap_{k=1}^{n}A_{k}=A_{1}\cap A_{2}\cap \ldots \cap A_{n}.$$
     
     <p>
+      합집합과 교집합은 결합볍칙이 자동적으로 만족되도록 정의되었다.
+      따라서 $A_{1} \cup A_{2} \cup \ldots \cup A_{n}$ 또는 $A_{1}\cap A_{2}\cap \ldots \cap A_{n}$이라고 적는 일에는 아무런 애매성이 없다.
     </p>
     </body>
 </html>
