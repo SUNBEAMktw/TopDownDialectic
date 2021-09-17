@@ -66,14 +66,14 @@ hr{
   border: 1px solid #ff794d !important;
 }
 em{
-  color: #ffff33;
-  text-decoration: overline underline;
+  color: #ff5050;
+  text-decoration: underline;
 }
 strong{
-  color: #ff4d79;
+  color: #ff5050;
   text-decoration: underline;
 }
 u{
-  color: #ffff33;
-  text-decoration: overline underline;
+  color: #ff5050;
+  text-decoration: underline;
 }
