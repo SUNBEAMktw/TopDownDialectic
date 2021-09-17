@@ -65,3 +65,11 @@ mark{
 hr{
   border: 1px solid #ff794d !important;
 }
+em{
+  color: #ff4d79;
+  text-decoration: underline;
+}
+strong{
+  color: #ff4d79;
+  text-decoration: underline;
+}
